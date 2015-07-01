@@ -1,0 +1,29 @@
+http://vancouver.ca/js/cov/common.js?v201505
+
+http://vancouver.ca/js/cov/Safari_WRP_Main_min.js
+
+Facilities:
+http://app.vancouver.ca/SafariActivityListWR_net/default.aspx?z=siteu
+
+Form:
+http://app.vancouver.ca/SafariActivityListWR_net/default.aspx?h=form
+
+Get activity types:
+http://app.vancouver.ca/SafariActivityListWR_net/default.aspx?z=activitytype
+
+Categories for activity type (activity type 45):
+http://app.vancouver.ca/SafariActivityListWR_net/default.aspx?g=1&z=category&c=45&x=C
+
+All classes search (page 1):
+http://app.vancouver.ca/SafariActivityListWR_net/default.aspx?g=1&pg=1&op=0&x=C&t=-1&d=-1&a=-1&l=-1&ft=-1&c=0&pp=0&s=
+
+g: ? only 1 works
+pg: page
+op: 
+c: activity type (ie. childcare(43), adapted access/special needs(47)...)
+pp: category, ie hockey(199), bicycling(162)
+d: day (sunday(1), monday(2), tuesday(3), ... saturday(7))
+t: timeslot (morning(M), afternoon(A), evening(E))
+a: age group (0-2(1), 0-5(6), 3-12(2), 6-12(7), 13-18(3), 19-64(4), 65+(5))
+l: location
+s: search word

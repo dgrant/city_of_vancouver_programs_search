@@ -1,0 +1,5 @@
+*.pyc
+/env
+/json
+/.idea
+/cov_programs/settings/local.py
