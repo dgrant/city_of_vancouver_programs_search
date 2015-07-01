@@ -61,6 +61,8 @@ def scrape_page(page):
         return True
 
 def scrape():
+    shutil.rmtree('json')
+    os.makedirs('json')
 #    for i in range(CONCURRENT):
     for i in range(MAX):
         q.put(next(counter))
