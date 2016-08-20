@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 from pycommon import http
 import argparse
 import json
@@ -45,6 +43,7 @@ def scrape_page(page):
         return True
     params = PARAMS.copy()
     params['pg'] = page
+    print('URL=', URL)
     output = http.do_http_get(URL, params=params)
     try:
         json_str = json.loads(output)
