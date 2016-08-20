@@ -7,6 +7,7 @@ import os
 from six.moves.queue import Queue
 from threading import Thread
 import itertools
+import shutil
 
 from six import print_
 

@@ -35,7 +35,7 @@ def clean_postalcode(postal_code):
     # Remove all spaces
     postal_code = ''.join(postal_code.split())
     assert len(postal_code) == 6
-    return '{0} {1}'.format(postal_code[0:3], postal_code[4:6])
+    return '{0} {1}'.format(postal_code[0:3], postal_code[3:6])
 
 def init_days_of_week():
     for id, name in DAYS_OF_WEEK:
@@ -121,7 +121,6 @@ def suckin_activity(program_dict):
 
 
     # Instructor
-    # TODO: this isn't being used on program I don't think.
     if not program_dict['instructorid'] == '':
         instructor = get_object_or_None(Instructor, id=program_dict['instructorid'])
         if not instructor:
@@ -169,6 +168,7 @@ def suckin_activity(program_dict):
     prog.onlinereg = y_n_to_boolean(program_dict['onlinereg'])
     prog.lac = y_n_to_boolean(program_dict['lac'])
     prog.fee = fee_to_decimal(program_dict['fee1'])
+    prog.instructor = instructor
 
     if len(prog.tracker.changed()) > 0:
         print_diff(prog)

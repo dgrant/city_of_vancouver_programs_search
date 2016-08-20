@@ -18,23 +18,16 @@ from django.contrib import admin
 
 from rest_framework import serializers, viewsets, routers
 
-from cov_search.models import *
+from cov_search import views
 
-# Serializers define the API representation.
-class ProgramSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = Program
-        fields = ('name', 'number')
-
-# ViewSets define the view behavior.
-class ProgramViewSet(viewsets.ModelViewSet):
-    queryset = Program.objects.all()
-    serializer_class = ProgramSerializer
-
-
-# Routers provide a way of automatically determining the URL conf.
 router = routers.DefaultRouter()
-router.register(r'programs', ProgramViewSet)
+router.register(r'programs', views.ProgramViewSet)
+router.register(r'sites', views.SiteViewSet)
+router.register(r'seasons', views.SeasonViewSet)
+router.register(r'categories', views.CategoryViewSet)
+router.register(r'days', views.DayViewSet)
+router.register(r'agegroups', views.AgeGroupViewSet)
+router.register(r'instructors', views.InstructorViewSet)
 
 urlpatterns = [
     url(r'^', include(router.urls)),

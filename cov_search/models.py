@@ -8,7 +8,7 @@ class Site(models.Model):
     id = models.IntegerField(primary_key=True) # comes from siteid
     name = models.CharField(max_length=50) # comes from site
     address = models.CharField(max_length=100) # comes form address
-    postalcode = models.CharField(max_length=7) # comes from postalcode
+    postalcode = models.CharField(max_length=10) # comes from postalcode
     phone = models.CharField(max_length=15) # comes from phone
 
     tracker = FieldTracker()
